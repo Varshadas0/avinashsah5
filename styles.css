@@ -118,23 +118,22 @@ nav .right a:hover span {
 
 /* Section 1: hero */
 .hero-section {
+    min-height: 90vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    margin: 50px 0;
-    margin-bottom: 100px;
+    padding: 60px 8%;
     gap: 40px;
 }
 
 .hero-section .text {
-    flex: 5;
+    flex: 1;
 }
 
 /* Animate the h2 */
 .hero-section .text h2 {
-    font-size: 45px;
-    opacity: 0;
+    font-size: 42px;
+    margin-bottom: 15px;
     transform: translateY(-20px);
     animation: fadeInUp 1s ease forwards;
 }
@@ -148,16 +147,15 @@ nav .right a:hover span {
 }
 
 .hero-section .text p {
-    margin-top: 15px;
-    line-height: 1.6;
     font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
 }
 
 .hero-section .text .links {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .hero-section .text .links a {
@@ -178,19 +176,25 @@ nav .right a:hover span {
 }
 
 .hero-section .headshot {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
+    flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section .headshot img {
-    width: 350px;
-    border-radius: 50%;
-    transition: transform 0.3s;
+   width: 100%;
+  max-width: 450px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .hero-section .headshot img:hover {
-    transform: scale(1.05);
+   transform: scale(1.05);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.35);
 }
 
 /* ===============================
@@ -222,8 +226,8 @@ nav .right a:hover span {
   }
 
   .hero-section .headshot img {
-    width: 240px;
-    height: auto;
+    width: 380px;
+    height: 320px;
   }
 }
 
@@ -254,7 +258,7 @@ nav .right a:hover span {
   .hero-section {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 30px 15px;
+    padding: 40px 20px;
   }
 
   .hero-section .text {
@@ -267,6 +271,7 @@ nav .right a:hover span {
 
   .hero-section .text p {
     font-size: 0.9rem;
+     max-width: 100%;
   }
 
   .hero-section .links {
@@ -280,8 +285,8 @@ nav .right a:hover span {
   }
 
   .hero-section .headshot img {
-    width: 200px;
-    margin-bottom: 20px;
+    max-width: 300px;
+    height: 380px;
   }
 }
 
@@ -732,3 +737,4 @@ body.dark-mode .contact-section .social-links a {
         justify-content: flex-start;
     }
 }
+
